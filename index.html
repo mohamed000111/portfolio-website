@@ -10,123 +10,213 @@
         content="Medical Insurance, Claims Review, Risk Evaluation, Medical Underwriting, Healthcare Compliance, Oncology Pharmacist">
     <meta name="author" content="Dr. Mohamed Rabie Shehata">
     <title>Dr. Mohamed Rabie Shehata - Medical Insurance Approval Doctor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Animated Background -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Theme Toggle -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
     </button>
 
     <main class="container">
-        <section class="profile-section">
-            <div class="profile-image">
-                <img src="https://scontent.fcai30-1.fna.fbcdn.net/v/t39.30808-1/262309664_2894687960748855_5256698082865493073_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=1d2534&_nc_ohc=TXr_w3708nEQ7kNvwGmUeCD&_nc_oc=AdkKi8ngfCmrsO7-BbxmJGhxJC2sk1PbfXbiAHr3WeWuvTKqhLDY9oFLBRrc---Zeco&_nc_zt=24&_nc_ht=scontent.fcai30-1.fna&_nc_gid=zNoxVDCmzAxtjD7MhnBECQ&oh=00_AfmIFno2XYaTdre03vIVIN2Z-lKIVh9NHriZdddNjxfP9Q&oe=6934385A"
-                    alt="Mohamed Rabie Shehata" id="profileImg">
+        <!-- Profile Section -->
+        <section class="profile-section" id="profileSection">
+            <div class="profile-image-wrapper">
+                <div class="profile-ring"></div>
+                <div class="profile-image">
+                    <img src="https://i.ibb.co/39KnkHFc/FB-IMG-1770330792423.jpg" alt="Dr. Mohamed Rabie Shehata"
+                        id="profileImg">
+                </div>
+            </div>
+            <div class="profile-badge">
+                <i class="fas fa-check-circle"></i> Verified Professional
             </div>
             <h1 class="name">Dr. Mohamed Rabie Shehata</h1>
-            <p class="title">Medical Insurance Approval Doctor | Risk Evaluation | Claims Review | Medical Underwriting
-                Specialist at Nextcare</p>
+            <p class="title">Medical Insurance Approval Doctor</p>
+            <div class="specialties">
+                <span class="specialty-tag">Risk Evaluation</span>
+                <span class="specialty-tag">Claims Review</span>
+                <span class="specialty-tag">Medical Underwriting</span>
+                <span class="specialty-tag">Nextcare</span>
+            </div>
         </section>
 
+        <!-- Professional Summary -->
+        <section class="summary-section">
+            <p class="summary-text">Results-driven Medical Insurance Analyst and Clinical Underwriting Professional with
+                a proven track record of leveraging clinical expertise and technical automation to optimize claim
+                accuracy. Demonstrated success in maintaining a <strong>99.92% approval quality score</strong>, reducing
+                operational errors, and increasing team productivity by <strong>12%</strong>. Adept at interpreting
+                complex medical documentation, conducting rigorous risk assessments, and aligning coverage decisions
+                with strict underwriting guidelines to mitigate financial risk and ensure regulatory compliance.
+            </p>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" data-count="4">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="50000">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">Claims Reviewed</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">Certifications</span>
+            </div>
+        </section>
+
+        <!-- Navigation Cards -->
         <nav class="links-section" aria-label="Main navigation">
-            <a href="#contact" class="link-card" data-section="contact">
-                <div class="icon">
+            <a href="#contact" class="link-card" data-section="contact" id="contactCard">
+                <div class="icon icon-contact">
                     <i class="fas fa-phone-alt"></i>
                 </div>
                 <div class="link-content">
-                    <h3>Contact info</h3>
+                    <h3>Contact Info</h3>
+                    <p class="subtitle">Get in touch with me</p>
                 </div>
                 <i class="fas fa-chevron-right arrow"></i>
             </a>
 
-            <a href="#resume" class="link-card" data-section="resume">
-                <div class="icon">
-                    <i class="fas fa-file-alt"></i>
+            <a href="#resume" class="link-card" data-section="resume" id="resumeCard">
+                <div class="icon icon-resume">
+                    <i class="fas fa-briefcase"></i>
                 </div>
                 <div class="link-content">
-                    <h3>My resume</h3>
-                    <p class="subtitle">Document</p>
+                    <h3>Work Experience</h3>
+                    <p class="subtitle">4 positions · 4+ years</p>
                 </div>
                 <i class="fas fa-chevron-right arrow"></i>
             </a>
 
-            <a href="#certificates" class="link-card" data-section="certificates">
-                <div class="icon">
+            <a href="#certificates" class="link-card" data-section="certificates" id="certificatesCard">
+                <div class="icon icon-cert">
                     <i class="fas fa-certificate"></i>
                 </div>
                 <div class="link-content">
-                    <h3>certificates</h3>
+                    <h3>Certificates</h3>
+                    <p class="subtitle">Professional achievements</p>
                 </div>
                 <i class="fas fa-chevron-right arrow"></i>
             </a>
 
-            <a href="#rate" class="link-card" data-section="rate">
-                <div class="icon">
+            <a href="#rate" class="link-card" data-section="rate" id="rateCard">
+                <div class="icon icon-rate">
                     <i class="fas fa-star"></i>
                 </div>
                 <div class="link-content">
-                    <h3>Rate me</h3>
+                    <h3>Rate Me</h3>
+                    <p class="subtitle">Your feedback matters</p>
                 </div>
                 <i class="fas fa-chevron-right arrow"></i>
             </a>
 
-            <a href="#comment" class="link-card" data-section="comment">
-                <div class="icon">
+            <a href="#comment" class="link-card" data-section="comment" id="commentCard">
+                <div class="icon icon-comment">
                     <i class="fas fa-comment"></i>
                 </div>
                 <div class="link-content">
-                    <h3>leave a comment</h3>
+                    <h3>Leave a Comment</h3>
+                    <p class="subtitle">Share your thoughts</p>
                 </div>
                 <i class="fas fa-chevron-right arrow"></i>
             </a>
         </nav>
 
+        <!-- Social Section -->
         <section class="social-section">
-            <h2>Social media profiles</h2>
-            <a href="https://www.linkedin.com/in/mo-rabie" target="_blank" class="link-card social-link">
-                <div class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <div class="link-content">
-                    <h3>Linked in profile</h3>
-                </div>
-                <i class="fas fa-external-link-alt arrow"></i>
-            </a>
+            <h2>Connect with me</h2>
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/mo-rabie" target="_blank" class="social-card" id="linkedinLink">
+                    <div class="social-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://wa.me/201554574350" target="_blank" class="social-card" id="whatsappLink">
+                    <div class="social-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:mrby20647@gmail.com" class="social-card" id="emailLink">
+                    <div class="social-icon email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span>Email</span>
+                </a>
+            </div>
         </section>
 
         <footer>
-            <p>&copy; 2024 Dr. Mohamed Rabie Shehata. All rights reserved.</p>
+            <p>&copy; 2026 Dr. Mohamed Rabie Shehata. All rights reserved.</p>
+            <p class="footer-sub">Built with <i class="fas fa-heart"></i> in Cairo, Egypt</p>
         </footer>
     </main>
 
     <!-- Modal for Contact Info -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-phone-alt"></i> Contact Information</h2>
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-contact"><i class="fas fa-phone-alt"></i></div>
+                <h2>Contact Information</h2>
+            </div>
             <div class="contact-info">
                 <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:mrby20647@gmail.com">mrby20647@gmail.com</a>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Personal Email</span>
+                        <a href="mailto:mrby20647@gmail.com">mrby20647@gmail.com</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:mohamed.rabie@mrby-tech.com">mohamed.rabie@mrby-tech.com</a>
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Work Email</span>
+                        <a href="mailto:mohamed.rabie@mrby-tech.com">mohamed.rabie@mrby-tech.com</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+201554574350">+20 155 457 4350</a>
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+201554574350">+20 155 457 4350</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <a href="https://wa.me/201554574350" target="_blank">WhatsApp Me</a>
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">WhatsApp</span>
+                        <a href="https://wa.me/201554574350" target="_blank">Send a Message</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span style="color: var(--text-primary);">7 Soliman Abaza, Sakakini, Ghamra, Cairo</span>
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Location</span>
+                        <span>7 Soliman Abaza, Sakakini, Ghamra, Cairo</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,16 +224,186 @@
 
     <!-- Modal for Resume -->
     <div id="resumeModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-file-alt"></i> My Resume</h2>
-            <div class="resume-links">
-                <a href="https://drive.google.com/uc?export=download&id=1RgxgF7ILGu1SHfmDpbj-BZQTbBInTdi_" class="download-btn">
-                    <i class="fas fa-download"></i> Download PDF
-                </a>
-                <a href="https://drive.google.com/file/d/1RgxgF7ILGu1SHfmDpbj-BZQTbBInTdi_/view?usp=sharing" class="view-btn" target="_blank">
-                    <i class="fas fa-eye"></i> View Online
-                </a>
+        <div class="modal-content modal-content-wide">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-resume"><i class="fas fa-briefcase"></i></div>
+                <h2>Work Experience</h2>
+            </div>
+            <p class="modal-desc">Click on any position to view details about my responsibilities and achievements.</p>
+
+            <!-- Experience Timeline -->
+            <div class="exp-timeline">
+
+                <!-- Job 1: NEXtCARE -->
+                <div class="exp-card" data-exp="1">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">NEXtCARE</h3>
+                            <span class="exp-role">Pre-Authorization Doctor</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> May 2023 – March 2026</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Maintained an exceptional 99.92% medical approval quality score and a 99.8% critical
+                                assurance rate by rigorously evaluating complex claims and diagnostic reports against
+                                underwriting policies.</li>
+                            <li>Performed comprehensive medical approval auditing, systematically reviewing case files
+                                and pre-authorization decisions to ensure strict adherence to clinical protocols.</li>
+                            <li>Developed and monitored KPI follow-up reports, leveraging data analysis to track
+                                operational metrics and provide actionable insights for process optimization.</li>
+                            <li>Spearheaded the development of a custom workflow automation tool for medical data
+                                extraction, driving a 12% increase in team productivity.</li>
+                            <li>Supervised main system automation enhancements, successfully reducing the incorrect
+                                decline ratio and improving overall claim resolution accuracy.</li>
+                            <li>Executed sound clinical judgments on pre-authorization requests, preventing fraud and
+                                waste while balancing cost-containment goals with optimal patient care.</li>
+                            <li>Negotiated complex claim settlements and collaborated with cross-functional teams to
+                                streamline the claims investigation process.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Bassem</span>
+                                    <span class="ref-role">Assistant Manager</span>
+                                    <a href="tel:+201117789848" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01117789848</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Ibrahim Bahgat</span>
+                                    <span class="ref-role">Assistant Manager</span>
+                                    <a href="tel:+201146822555" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01146822555</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Mr. Mohamed Rihan</span>
+                                    <span class="ref-role">Manager</span>
+                                    <a href="tel:+201146877766" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01146877766</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2: Care Pharmacies -->
+                <div class="exp-card" data-exp="2">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">Care Pharmacies</h3>
+                            <span class="exp-role">Shift Manager</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2022 – Apr 2023</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Directed high-volume pharmacy operations and supervised staff workflows, earning
+                                "Employee of the Month" (Jan & Mar 2023) for consistently exceeding operational KPIs.
+                            </li>
+                            <li>Reduced insurance claim rejection rates by 12% by implementing rigorous pre-dispensing
+                                clinical reviews and ensuring strict adherence to payer billing protocols.</li>
+                            <li>Drove branch revenue growth by consistently exceeding monthly sales targets by 10-15%
+                                through strategic inventory management.</li>
+                            <li>Optimized supply chain logistics, minimizing pharmaceutical waste while ensuring 100%
+                                compliance with clinical quality standards.</li>
+                            <li>Analyzed sales, expense, and profitability data to prepare comprehensive financial
+                                reports and identify cost-saving opportunities.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Atef Abd Baqqy</span>
+                                    <span class="ref-role">Branch Manager</span>
+                                    <a href="tel:+201118661244" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01118661244</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Basma</span>
+                                    <span class="ref-role">Branch Manager</span>
+                                    <a href="mailto:basmaasayed50@yahoo.com" class="ref-contact"><i
+                                            class="fas fa-envelope"></i> basmaasayed50@yahoo.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3: Community Pharmacist -->
+                <div class="exp-card" data-exp="3">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">Community Pharmacy</h3>
+                            <span class="exp-role">Community Pharmacist</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Sep 2021 – Jun 2022</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Executed physician prescriptions with strict attention to detail, verifying clinical
+                                appropriateness to guarantee zero dispensing errors.</li>
+                            <li>Monitored drug therapies and potential interactions, providing critical patient
+                                education that improved medication adherence.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 4: El Ezaby Pharmacy -->
+                <div class="exp-card" data-exp="4">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">El Ezaby Pharmacy</h3>
+                            <span class="exp-role">Pharmacist</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Sep 2021 – Jun 2022</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Dispensed medications and collaborated directly with healthcare providers to optimize
+                                patient therapy outcomes.</li>
+                            <li>Enforced strict adherence to corporate and legal pharmacy regulations during all daily
+                                operations.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Ahmed Nabil</span>
+                                    <span class="ref-role">Area Manager</span>
+                                    <a href="tel:+201061292828" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01061292828</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Resume Download -->
+            <div class="exp-footer">
+                <p class="exp-footer-label">Want the full CV?</p>
+                <div class="resume-links">
+                    <a href="https://drive.google.com/uc?export=download&id=1DifZLp5VnY6qaxuIf51gIbPUQP1MeDsU"
+                        class="action-btn primary-btn" id="downloadResumeBtn" target="_blank" rel="noopener noreferrer"
+                        download>
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <a href="https://drive.google.com/file/d/1DifZLp5VnY6qaxuIf51gIbPUQP1MeDsU/view?usp=sharing"
+                        class="action-btn secondary-btn" target="_blank" id="viewResumeBtn">
+                        <i class="fas fa-eye"></i> View Online
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -151,11 +411,16 @@
     <!-- Modal for Certificates -->
     <div id="certificatesModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-certificate"></i> Certificates</h2>
-            <p>View all my professional certificates and achievements</p>
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-cert"><i class="fas fa-certificate"></i></div>
+                <h2>Certificates</h2>
+            </div>
+            <p class="modal-desc">Explore all my professional certificates and achievements that demonstrate my
+                expertise.</p>
             <div class="certificates-links">
-                <a href="https://drive.google.com/drive/folders/1R6RE6P9vKqDEqzeNyX31B59OanQrkjY9?usp=sharing" class="view-btn" target="_blank">
+                <a href="https://drive.google.com/drive/folders/1R6RE6P9vKqDEqzeNyX31B59OanQrkjY9?usp=sharing"
+                    class="action-btn primary-btn" target="_blank" id="browseCertsBtn">
                     <i class="fas fa-folder-open"></i> Browse All Certificates
                 </a>
             </div>
@@ -165,11 +430,22 @@
     <!-- Modal for Rate Me -->
     <div id="rateModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-star"></i> Rate Me</h2>
-            <p>Your feedback helps me improve!</p>
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-rate"><i class="fas fa-star"></i></div>
+                <h2>Rate Me</h2>
+            </div>
+            <p class="modal-desc">Your feedback helps me improve and grow. I appreciate every rating!</p>
+            <div class="rating-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
             <div class="rating-options">
-                <a href="https://forms.gle/ACeCvazSNWe6uCnRA" target="_blank" class="rating-btn">
+                <a href="https://forms.gle/ACeCvazSNWe6uCnRA" target="_blank" class="action-btn primary-btn"
+                    id="ratingBtn">
                     <i class="fas fa-external-link-alt"></i> Leave a Rating
                 </a>
             </div>
@@ -179,11 +455,15 @@
     <!-- Modal for Comments -->
     <div id="commentModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2><i class="fas fa-comment"></i> Leave a Comment</h2>
-            <p>I'd love to hear from you!</p>
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-comment"><i class="fas fa-comment"></i></div>
+                <h2>Leave a Comment</h2>
+            </div>
+            <p class="modal-desc">I'd love to hear from you! Share your thoughts, suggestions, or feedback.</p>
             <div class="comment-options">
-                <a href="https://forms.gle/jAsdQu3De1KFKTbY6" target="_blank" class="comment-btn">
+                <a href="https://forms.gle/jAsdQu3De1KFKTbY6" target="_blank" class="action-btn primary-btn"
+                    id="commentBtn">
                     <i class="fas fa-external-link-alt"></i> Leave a Comment
                 </a>
             </div>
@@ -192,4 +472,5 @@
 
     <script src="script.js"></script>
 </body>
-</html></
+
+</html>
