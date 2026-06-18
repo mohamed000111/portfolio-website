@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mohamed Rabie - Insurance Operations Specialist in Policy Administration, Medical Underwriting, Risk Evaluation & Claims Review. 4+ years in healthcare and insurance operations.">
+    <meta name="keywords"
+        content="Insurance Operations, Policy Administration, Medical Underwriting, Claims Review, Risk Evaluation, Healthcare Compliance, Data Analytics">
+    <meta name="author" content="Dr.Mohamed Rabie Shehata">
+    <title>Dr.Mohamed Rabie Shehata- Insurance Operations Specialist | Policy Administration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-orbs" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop autoplay preload="auto">
+        <source src="https://files.breakingcopyright.com/song/savfk-the-travelling-symphony.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Page Header Bar -->
+    <header class="page-header" id="pageHeader">
+        <div class="header-controls">
+            <!-- Zoom Controls -->
+            <div class="header-group zoom-group">
+                <button class="header-btn" id="zoomOut" aria-label="Zoom out" title="Zoom Out">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <span class="zoom-level" id="zoomLevel">100%</span>
+                <button class="header-btn" id="zoomIn" aria-label="Zoom in" title="Zoom In">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+            </div>
+
+            <div class="header-divider"></div>
+
+            <!-- Music Toggle -->
+            <button class="header-btn music-btn" id="musicToggle" aria-label="Toggle background music"
+                title="Toggle Music">
+                <i class="fas fa-volume-mute"></i>
+                <i class="fas fa-volume-up"></i>
+                <div class="music-bars" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </button>
+
+            <div class="header-divider"></div>
+
+            <!-- Theme Toggle -->
+            <button class="header-btn theme-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+
+            <div class="header-divider"></div>
+
+            <!-- Share Button -->
+            <button class="header-btn share-btn" id="shareBtn" aria-label="Share page" title="Share Profile">
+                <i class="fas fa-share-alt"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Profile Section -->
+        <section class="profile-section" id="profileSection">
+            <div class="profile-image-wrapper">
+                <div class="profile-ring"></div>
+                <div class="profile-image">
+                    <img src="https://i.ibb.co/39KnkHFc/FB-IMG-1770330792423.jpg" alt="Dr. Mohamed Rabie Shehata"
+                        id="profileImg">
+                </div>
+            </div>
+            <div class="profile-badge">
+                <i class="fas fa-check-circle"></i> Verified Professional
+            </div>
+            <h1 class="name">Dr. Mohamed Rabie Shehata</h1>
+            <p class="title">Insurance Operations Specialist | Policy Administration & Medical Underwriting</p>
+            <div class="specialties">
+                <span class="specialty-tag">Policy Administration</span>
+                <span class="specialty-tag">Medical Underwriting</span>
+                <span class="specialty-tag">Risk Evaluation</span>
+                <span class="specialty-tag">Claims Review</span>
+                <span class="specialty-tag">Data Analytics</span>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section class="summary-section">
+            <p class="summary-text">Results-driven Insurance Operations Specialist with <strong>4+ years</strong> of
+                experience in
+                policy administration, medical underwriting, and claims management. Proven track record in managing
+                end-to-end policy lifecycles — from issuance and endorsements to renewals and cancellations — while
+                maintaining a <strong>99.92% approval quality score</strong>. Skilled in leveraging clinical expertise
+                and technical automation to optimize claim accuracy, increase team productivity by <strong>12%</strong>,
+                and ensure strict regulatory compliance. Adept at interpreting complex medical documentation, conducting
+                rigorous risk assessments, and aligning coverage decisions with underwriting guidelines.
+            </p>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" data-count="4">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="50000">0</span><span class="stat-suffix">+</span>
+                <span class="stat-label">Policies & Claims</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="99">0</span><span class="stat-suffix">%</span>
+                <span class="stat-label">Quality Score</span>
+            </div>
+        </section>
+
+        <!-- Navigation Cards -->
+        <nav class="links-section" aria-label="Main navigation">
+            <a href="#contact" class="link-card" data-section="contact" id="contactCard">
+                <div class="icon icon-contact">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Contact Info</h3>
+                    <p class="subtitle">Get in touch with me</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#resume" class="link-card" data-section="resume" id="resumeCard">
+                <div class="icon icon-resume">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Work Experience</h3>
+                    <p class="subtitle">6 positions · 4+ years</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#certificates" class="link-card" data-section="certificates" id="certificatesCard">
+                <div class="icon icon-cert">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Certificates</h3>
+                    <p class="subtitle">Professional achievements</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#education" class="link-card" data-section="education" id="educationCard">
+                <div class="icon icon-education">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Education</h3>
+                    <p class="subtitle">B.Pharm.Sci · Nahda University</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#skills" class="link-card" data-section="skills" id="skillsCard">
+                <div class="icon icon-skills">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Skills & Expertise</h3>
+                    <p class="subtitle">Technical & domain skills</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#rate" class="link-card" data-section="rate" id="rateCard">
+                <div class="icon icon-rate">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Rate Me</h3>
+                    <p class="subtitle">Your feedback matters</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+
+            <a href="#comment" class="link-card" data-section="comment" id="commentCard">
+                <div class="icon icon-comment">
+                    <i class="fas fa-comment"></i>
+                </div>
+                <div class="link-content">
+                    <h3>Leave a Comment</h3>
+                    <p class="subtitle">Share your thoughts</p>
+                </div>
+                <i class="fas fa-chevron-right arrow"></i>
+            </a>
+        </nav>
+        <!-- Social Section -->
+        <section class="social-section">
+            <h2>Connect with me</h2>
+            <div class="social-grid">
+                <a href="https://www.linkedin.com/in/mo-rabie" target="_blank" class="social-card" id="linkedinLink">
+                    <div class="social-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://wa.me/201554574350" target="_blank" class="social-card" id="whatsappLink">
+                    <div class="social-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <span>WhatsApp</span>
+                </a>
+                <a href="mailto:mrby20647@gmail.com" class="social-card" id="emailLink">
+                    <div class="social-icon email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <span>Email</span>
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Mohamed Rabie. All rights reserved.</p>
+            <p class="footer-sub">Built with <i class="fas fa-heart"></i> in Cairo, Egypt</p>
+            <p class="footer-music"><i class="fas fa-music"></i> Music: <a
+                    href="https://breakingcopyright.com/song/savfk-the-travelling-symphony" target="_blank">The
+                    Travelling Symphony</a> by Savfk | <a href="https://creativecommons.org/licenses/by/4.0/"
+                    target="_blank">CC BY 4.0</a></p>
+        </footer>
+    </main>
+
+    <!-- Modal for Contact Info -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-contact"><i class="fas fa-phone-alt"></i></div>
+                <h2>Contact Information</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Personal Email</span>
+                        <a href="mailto:mrby20647@gmail.com">mrby20647@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Work Email</span>
+                        <a href="mailto:mohamed.rabie@mrby-tech.com">mohamed.rabie@mrby-tech.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Phone</span>
+                        <a href="tel:+201554574350">+20 155 457 4350</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">WhatsApp</span>
+                        <a href="https://wa.me/201554574350" target="_blank">Send a Message</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-detail">
+                        <span class="contact-label">Location</span>
+                        <span>7 Soliman Abaza, Sakakini, Ghamra, Cairo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Resume -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content modal-content-wide">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-resume"><i class="fas fa-briefcase"></i></div>
+                <h2>Work Experience</h2>
+            </div>
+            <p class="modal-desc">Click on any position to view details about my responsibilities and achievements.</p>
+
+            <!-- Experience Timeline -->
+            <div class="exp-timeline">
+
+                <!-- Job 0: Mediconsult -->
+                <div class="exp-card" data-exp="0">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">Mediconsult</h3>
+                            <span class="exp-role">Deputy Approvals Manager</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> June 2026 – Present</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Overseeing and managing the medical approvals workflow, ensuring timely and accurate processing of pre-authorization requests.</li>
+                            <li>Supervising the approvals team to maintain high-quality standards and adherence to clinical and underwriting guidelines.</li>
+                            <li>Reviewing complex medical cases and making informed coverage decisions based on policy terms and clinical evidence.</li>
+                            <li>Collaborating with medical providers, insurers, and internal stakeholders to streamline approval processes and resolve escalations.</li>
+                            <li>Monitoring key performance indicators (KPIs) and implementing process improvements to enhance operational efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 1: NEXtCARE -->
+                <div class="exp-card" data-exp="1">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">NEXtCARE (Allianz Partners)</h3>
+                            <span class="exp-role">Pre-Authorization Doctor officer</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> May 2023 – March 2026</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Maintained an exceptional 99.92% medical approval quality score and a 99.8% critical
+                                assurance rate by rigorously evaluating complex claims and diagnostic reports against
+                                underwriting policies.</li>
+                            <li>Performed comprehensive medical approval auditing, systematically reviewing case files
+                                and pre-authorization decisions to ensure strict adherence to clinical protocols.</li>
+                            <li>Developed and monitored KPI follow-up reports, leveraging data analysis to track
+                                operational metrics and provide actionable insights for process optimization.</li>
+                            <li>Spearheaded the development of a custom workflow automation tool for medical data
+                                extraction, driving a 12% increase in team productivity.</li>
+                            <li>Supervised main system automation enhancements, successfully reducing the incorrect
+                                decline ratio and improving overall claim resolution accuracy.</li>
+                            <li>Executed sound clinical judgments on pre-authorization requests, preventing fraud and
+                                waste while balancing cost-containment goals with optimal patient care.</li>
+                            <li>Negotiated complex claim settlements and collaborated with cross-functional teams to
+                                streamline the claims investigation process.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Bassem</span>
+                                    <span class="ref-role">Assistant Manager</span>
+                                    <a href="tel:+201117789848" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01117789848</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Ibrahim Bahgat</span>
+                                    <span class="ref-role">Assistant Manager</span>
+                                    <a href="tel:+201146822555" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01146822555</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Mr. Mohamed Rihan</span>
+                                    <span class="ref-role">Manager</span>
+                                    <a href="tel:+201146877766" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01146877766</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2: National Cancer Institute -->
+                <div class="exp-card" data-exp="2">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">National Cancer Institute – Cairo University</h3>
+                            <span class="exp-role">Medical Data Analyst</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> 2024 – 2026</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Collected, cleaned, and organized patient medical data from hospital records and
+                                clinical databases to support research and reporting.</li>
+                            <li>Created structured datasets and dashboards for internal medical teams using Excel and
+                                analytical tools.</li>
+                            <li>Ensured accuracy and completeness of oncology patient records, treatment histories, and
+                                outcome data.</li>
+                            <li>Collaborated with clinical research teams to support data-driven studies and
+                                institutional reports.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3: Care Pharmacies -->
+                <div class="exp-card" data-exp="3">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">Care Pharmacies</h3>
+                            <span class="exp-role">Shift Manager</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Jan 2022 – Apr 2023</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Directed high-volume pharmacy operations and supervised staff workflows, earning
+                                "Employee of the Month" (Jan &amp; Mar 2023) for consistently exceeding operational
+                                KPIs.</li>
+                            <li>Reduced insurance claim rejection rates by 12% by implementing rigorous pre-dispensing
+                                clinical reviews and ensuring strict adherence to payer billing protocols.</li>
+                            <li>Drove branch revenue growth by consistently exceeding monthly sales targets by 10-15%
+                                through strategic inventory management.</li>
+                            <li>Optimized supply chain logistics, minimizing pharmaceutical waste while ensuring 100%
+                                compliance with clinical quality standards.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Atef Abd Baqqy</span>
+                                    <span class="ref-role">Branch Manager</span>
+                                    <a href="tel:+201118661244" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01118661244</a>
+                                </div>
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Basma</span>
+                                    <span class="ref-role">Branch Manager</span>
+                                    <a href="mailto:basmaasayed50@yahoo.com" class="ref-contact"><i
+                                            class="fas fa-envelope"></i> basmaasayed50@yahoo.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 5: El Ezaby Pharmacy -->
+                <div class="exp-card" data-exp="5">
+                    <div class="exp-card-header">
+                        <div class="exp-dot"></div>
+                        <div class="exp-info">
+                            <h3 class="exp-company">El Ezaby Pharmacy Chain</h3>
+                            <span class="exp-role">Pharmacist</span>
+                            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Sep 2021 – Jun 2022</span>
+                        </div>
+                        <div class="exp-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="exp-card-body">
+                        <ul>
+                            <li>Dispensed medications and collaborated directly with healthcare providers to optimize
+                                patient therapy outcomes.</li>
+                            <li>Enforced strict adherence to corporate and legal pharmacy regulations during all daily
+                                operations.</li>
+                        </ul>
+                        <div class="ref-section">
+                            <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
+                            <div class="ref-list">
+                                <div class="ref-item">
+                                    <span class="ref-name">Dr. Ahmed Nabil</span>
+                                    <span class="ref-role">Area Manager</span>
+                                    <a href="tel:+201061292828" class="ref-contact"><i class="fas fa-phone-alt"></i>
+                                        01061292828</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Resume Download -->
+            <div class="exp-footer">
+                <p class="exp-footer-label">Want the full CV?</p>
+                <div class="resume-links">
+                    <a href="https://drive.google.com/uc?export=download&id=14h3Ve3AM6zzgMrruTQUPQ7CLm_19_AoZ"
+                        class="action-btn primary-btn" id="downloadResumeBtn" target="_blank" rel="noopener noreferrer"
+                        download>
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <a href="https://drive.google.com/file/d/14h3Ve3AM6zzgMrruTQUPQ7CLm_19_AoZ/view?usp=sharing"
+                        class="action-btn secondary-btn" target="_blank" id="viewResumeBtn">
+                        <i class="fas fa-eye"></i> View Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Certificates -->
+    <div id="certificatesModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-cert"><i class="fas fa-certificate"></i></div>
+                <h2>Certificates</h2>
+            </div>
+            <p class="modal-desc">Explore all my professional certificates and achievements that demonstrate my
+                expertise.</p>
+            <div class="certificates-links">
+                <a href="https://drive.google.com/drive/folders/1R6RE6P9vKqDEqzeNyX31B59OanQrkjY9?usp=sharing"
+                    class="action-btn primary-btn" target="_blank" id="browseCertsBtn">
+                    <i class="fas fa-folder-open"></i> Browse All Certificates
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Rate Me -->
+    <div id="rateModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-rate"><i class="fas fa-star"></i></div>
+                <h2>Rate Performance</h2>
+            </div>
+            <p class="modal-desc" style="margin-bottom: 20px;">Please rate my performance across the following categories.</p>
+            
+            <form id="ratingForm" class="rating-form testimonial-form">
+                <div class="form-row" style="margin-bottom: 8px;">
+                    <input type="text" id="rateName" placeholder="Your Name" required>
+                    <input type="text" id="ratePosition" placeholder="Your Position / Company" required>
+                </div>
+                
+                <div class="rating-category">
+                    <label>Quality of Work</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateQuality" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valQuality">6</span>
+                    </div>
+                </div>
+                <div class="rating-category">
+                    <label>Job Knowledge</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateKnowledge" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valKnowledge">6</span>
+                    </div>
+                </div>
+                <div class="rating-category">
+                    <label>Communication Skills</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateCommunication" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valCommunication">6</span>
+                    </div>
+                </div>
+                <div class="rating-category">
+                    <label>Productivity</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateProductivity" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valProductivity">6</span>
+                    </div>
+                </div>
+                <div class="rating-category">
+                    <label>Management Ability</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateManagement" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valManagement">6</span>
+                    </div>
+                </div>
+                <div class="rating-category">
+                    <label>Overall Performance</label>
+                    <div class="slider-container">
+                        <input type="range" id="rateOverall" min="1" max="6" value="6" class="rating-slider">
+                        <span class="rating-value" id="valOverall">6</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitRatingBtn" style="margin-top: 24px; width: 100%; justify-content: center;">
+                    <span>Submit Rating</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <h3 style="margin: 32px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent Ratings</h3>
+            
+            <div class="testimonials-container" id="ratingsList" style="padding-right: 8px;">
+                <div class="loading-spinner"><i class="fas fa-circle-notch fa-spin"></i> Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Comments / Testimonials -->
+    <div id="commentModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-comment"><i class="fas fa-comment-dots"></i></div>
+                <h2>What Others Say About Me</h2>
+            </div>
+            
+            <div class="add-testimonial">
+                <h3>Leave a Comment</h3>
+                <form id="testimonialForm" class="testimonial-form">
+                    <div class="form-row">
+                        <input type="text" id="testName" placeholder="Your Name" required>
+                        <input type="text" id="testPosition" placeholder="Your Position / Company" required>
+                    </div>
+                    <textarea id="testComment" placeholder="What was your experience working with me?" rows="3" required></textarea>
+                    <button type="submit" class="submit-btn" id="submitTestimonial">
+                        <span>Send Comment</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <h3 style="margin: 24px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent Comments</h3>
+            
+            <div class="testimonials-container" id="testimonialsList" style="padding-right: 8px;">
+                <div class="loading-spinner"><i class="fas fa-circle-notch fa-spin"></i> Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Education -->
+    <div id="educationModal" class="modal">
+        <div class="modal-content">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-education"><i class="fas fa-graduation-cap"></i></div>
+                <h2>Education</h2>
+            </div>
+            <div class="education-card">
+                <div class="edu-institution">
+                    <i class="fas fa-university"></i>
+                    <div>
+                        <h3>Nahda University (NUB)</h3>
+                        <span class="edu-location">Beni Suef, Egypt</span>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <div class="edu-degree">
+                        <span class="edu-label">Degree</span>
+                        <span>Bachelor of Pharmaceutical Sciences (B.Pharm.Sci)</span>
+                    </div>
+                    <div class="edu-grade">
+                        <span class="edu-label">Grade</span>
+                        <span class="edu-grade-badge">Very Good</span>
+                    </div>
+                    <div class="edu-year">
+                        <span class="edu-label">Graduated</span>
+                        <span>2021</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="learning-section-title"><i class="fas fa-book-reader"></i> Continuous Learning</h3>
+
+            <div class="education-card">
+                <div class="edu-institution">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>Maven Analytics</h3>
+                        <span class="edu-location">Online · Professional Certification</span>
+                    </div>
+                </div>
+                <div class="edu-details">
+                    <div class="edu-degree">
+                        <span class="edu-label">Program</span>
+                        <span>Data Analytics Professional Level</span>
+                    </div>
+                    <div class="edu-grade">
+                        <span class="edu-label">Grade</span>
+                        <span class="edu-grade-badge">Very Good · 92%</span>
+                    </div>
+                    <div class="edu-year">
+                        <span class="edu-label">Completed</span>
+                        <span>May 2026</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Skills -->
+    <div id="skillsModal" class="modal">
+        <div class="modal-content modal-content-wide">
+            <button class="close" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon icon-skills"><i class="fas fa-cogs"></i></div>
+                <h2>Skills & Expertise</h2>
+            </div>
+            <p class="modal-desc">A comprehensive overview of my technical and domain expertise.</p>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title"><i class="fas fa-laptop-code"></i> Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-chip"><i class="fas fa-file-excel"></i> Microsoft Excel</div>
+                    <div class="skill-chip"><i class="fas fa-database"></i> SQL</div>
+                    <div class="skill-chip"><i class="fas fa-chart-bar"></i> Power BI</div>
+                    <div class="skill-chip"><i class="fas fa-chart-area"></i> Tableau</div>
+                    <div class="skill-chip"><i class="fas fa-code"></i> Python</div>
+                    <div class="skill-chip"><i class="fas fa-hospital"></i> EHR Systems</div>
+                    <div class="skill-chip"><i class="fas fa-cog"></i> Workflow Automation</div>
+                    <div class="skill-chip"><i class="fas fa-file-alt"></i> Data Entry & QA</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title"><i class="fas fa-shield-alt"></i> Insurance & Domain Expertise</h3>
+                <div class="skills-grid">
+                    <div class="skill-chip"><i class="fas fa-file-contract"></i> Policy Administration</div>
+                    <div class="skill-chip"><i class="fas fa-clipboard-check"></i> Medical Underwriting</div>
+                    <div class="skill-chip"><i class="fas fa-search-dollar"></i> Claims Adjudication</div>
+                    <div class="skill-chip"><i class="fas fa-heartbeat"></i> Pre-Authorization</div>
+                    <div class="skill-chip"><i class="fas fa-balance-scale"></i> Risk Evaluation</div>
+                    <div class="skill-chip"><i class="fas fa-gavel"></i> Regulatory Compliance</div>
+                    <div class="skill-chip"><i class="fas fa-stethoscope"></i> Clinical Pharmacology</div>
+                    <div class="skill-chip"><i class="fas fa-users-cog"></i> Team Leadership</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3 class="skills-category-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                <div class="cert-list">
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Diploma of Oncology for Allied Clinicians (DOAC)</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Advanced Microsoft Excel Certification</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>First Aid & Emergency Response</span>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-award"></i>
+                        <span>Python for Data Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js?v=2.0"></script>
+</body>
+
+</html>
