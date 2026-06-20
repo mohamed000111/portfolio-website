@@ -439,7 +439,6 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
    PROFILE SECTION
    ============================ */
 .profile-section {
-    text-align: center;
     margin-bottom: 24px;
     animation: fadeSlideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     background: var(--bg-card);
@@ -448,16 +447,14 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     overflow: hidden;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    padding-bottom: 24px;
 }
 
 /* Profile Banner */
 .profile-banner {
     position: relative;
     width: 100%;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
-    margin-bottom: -75px;
 }
 
 .profile-banner img {
@@ -473,52 +470,23 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     transform: scale(1.03);
 }
 
-.banner-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        transparent 40%,
-        rgba(6, 8, 15, 0.6) 75%,
-        rgba(6, 8, 15, 0.95) 100%
-    );
-    pointer-events: none;
-}
-
-[data-theme="light"] .banner-overlay {
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        transparent 40%,
-        rgba(248, 250, 252, 0.5) 75%,
-        rgba(248, 250, 252, 0.9) 100%
-    );
-}
-
-@keyframes fadeSlideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Profile Body - LinkedIn-style layout */
+.profile-body {
+    position: relative;
+    padding: 0 24px 24px;
 }
 
 .profile-image-wrapper {
     position: relative;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 16px;
+    width: 130px;
+    height: 130px;
+    margin-top: -65px;
     z-index: 2;
 }
 
 .profile-ring {
     position: absolute;
-    inset: -6px;
+    inset: -5px;
     border-radius: 50%;
     background: conic-gradient(from 0deg,
             var(--accent-primary),
@@ -537,7 +505,7 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     position: absolute;
     inset: 3px;
     border-radius: 50%;
-    background: var(--bg-primary);
+    background: var(--bg-card);
 }
 
 @keyframes spinRing {
@@ -549,10 +517,11 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
 .profile-image {
     position: relative;
     z-index: 1;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     overflow: hidden;
+    border: 4px solid var(--bg-card);
     transition: var(--transition-smooth);
 }
 
@@ -567,6 +536,24 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     display: block;
 }
 
+/* Profile Info - Left aligned */
+.profile-info {
+    padding-top: 12px;
+    text-align: left;
+}
+
+.profile-location {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.profile-location i {
+    color: var(--accent-secondary);
+    margin-right: 5px;
+    font-size: 12px;
+}
+
 .profile-badge {
     display: inline-flex;
     align-items: center;
@@ -578,7 +565,7 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     font-size: 12px;
     font-weight: 600;
     color: var(--accent-secondary);
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
@@ -588,9 +575,9 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
 }
 
 .name {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: -0.5px;
     background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
@@ -599,18 +586,18 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
 }
 
 .title {
-    font-size: 16px;
+    font-size: 14px;
     color: var(--text-secondary);
     font-weight: 500;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+    line-height: 1.5;
 }
 
 .specialties {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 0;
 }
 
 .specialty-tag {
@@ -618,17 +605,28 @@ body>*:not(.bg-orbs):not(#particleCanvas):not(.modal) {
     border-radius: 50px;
     font-size: 12px;
     font-weight: 500;
-    background: var(--bg-card);
+    background: rgba(124, 58, 237, 0.06);
     border: 1px solid var(--border-color);
     color: var(--text-secondary);
     transition: var(--transition-fast);
-    backdrop-filter: blur(12px);
 }
 
 .specialty-tag:hover {
     border-color: var(--border-hover);
     color: var(--accent-secondary);
-    background: rgba(124, 58, 237, 0.08);
+    background: rgba(124, 58, 237, 0.12);
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================
