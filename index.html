@@ -79,7 +79,8 @@
         <!-- Profile Section -->
         <section class="profile-section" id="profileSection">
             <div class="profile-banner">
-                <img src="https://media.licdn.com/dms/image/v2/D4D16AQEN7l7jj8NSFw/profile-displaybackgroundimage-shrink_350_1400/B4DZ7YcFNvKYAU-/0/1781747700864?e=1783555200&v=beta&t=rFSQcQvHFH9Yq0L7fqkUxTsEE2q6QRxHO2J_MJ3v1FY" alt="Cover Banner" id="bannerImg">
+                <img src="https://media.licdn.com/dms/image/v2/D4D16AQEN7l7jj8NSFw/profile-displaybackgroundimage-shrink_350_1400/B4DZ7YcFNvKYAU-/0/1781747700864?e=1783555200&v=beta&t=rFSQcQvHFH9Yq0L7fqkUxTsEE2q6QRxHO2J_MJ3v1FY"
+                    alt="Cover Banner" id="bannerImg">
             </div>
             <div class="profile-body">
                 <div class="profile-image-wrapper">
@@ -316,7 +317,8 @@
                 <!-- Job 0: Mediconsult -->
                 <div class="exp-card" data-exp="0">
                     <div class="exp-card-header">
-                        <div class="exp-dot"></div>
+                        <img class="exp-logo" src="https://mediconsulteg.com/assets/images/logo.png" alt="Mediconsult"
+                            onerror="this.src='https://www.google.com/s2/favicons?domain=mediconsulteg.com&sz=64'">
                         <div class="exp-info">
                             <h3 class="exp-company">Mediconsult</h3>
                             <span class="exp-role">Approvals Department Manager</span>
@@ -326,11 +328,16 @@
                     </div>
                     <div class="exp-card-body">
                         <ul>
-                            <li>Overseeing and managing the medical approvals workflow, ensuring timely and accurate processing of pre-authorization requests.</li>
-                            <li>Supervising the approvals team to maintain high-quality standards and adherence to clinical and underwriting guidelines.</li>
-                            <li>Reviewing complex medical cases and making informed coverage decisions based on policy terms and clinical evidence.</li>
-                            <li>Collaborating with medical providers, insurers, and internal stakeholders to streamline approval processes and resolve escalations.</li>
-                            <li>Monitoring key performance indicators (KPIs) and implementing process improvements to enhance operational efficiency.</li>
+                            <li>Overseeing and managing the medical approvals workflow, ensuring timely and accurate
+                                processing of pre-authorization requests.</li>
+                            <li>Supervising the approvals team to maintain high-quality standards and adherence to
+                                clinical and underwriting guidelines.</li>
+                            <li>Reviewing complex medical cases and making informed coverage decisions based on policy
+                                terms and clinical evidence.</li>
+                            <li>Collaborating with medical providers, insurers, and internal stakeholders to streamline
+                                approval processes and resolve escalations.</li>
+                            <li>Monitoring key performance indicators (KPIs) and implementing process improvements to
+                                enhance operational efficiency.</li>
                         </ul>
                         <div class="ref-section">
                             <h4 class="ref-title"><i class="fas fa-user-tie"></i> References</h4>
@@ -349,7 +356,9 @@
                 <!-- Job 1: NEXtCARE -->
                 <div class="exp-card" data-exp="1">
                     <div class="exp-card-header">
-                        <div class="exp-dot"></div>
+                        <img class="exp-logo" src="https://www.nextcarehealth.com/wp-content/uploads/2021/06/logo.svg"
+                            alt="NEXtCARE"
+                            onerror="this.src='https://www.google.com/s2/favicons?domain=nextcarehealth.com&sz=64'">
                         <div class="exp-info">
                             <h3 class="exp-company">NEXtCARE (Allianz Partners)</h3>
                             <span class="exp-role">Pre-Authorization Doctor officer</span>
@@ -404,7 +413,8 @@
                 <!-- Job 2: National Cancer Institute -->
                 <div class="exp-card" data-exp="2">
                     <div class="exp-card-header">
-                        <div class="exp-dot"></div>
+                        <img class="exp-logo" src="https://www.google.com/s2/favicons?domain=nci.cu.edu.eg&sz=64"
+                            alt="National Cancer Institute">
                         <div class="exp-info">
                             <h3 class="exp-company">National Cancer Institute – Cairo University</h3>
                             <span class="exp-role">Medical Data Analyst</span>
@@ -429,7 +439,8 @@
                 <!-- Job 3: Care Pharmacies -->
                 <div class="exp-card" data-exp="3">
                     <div class="exp-card-header">
-                        <div class="exp-dot"></div>
+                        <img class="exp-logo" src="https://www.google.com/s2/favicons?domain=care-pharmacies.com&sz=64"
+                            alt="Care Pharmacies">
                         <div class="exp-info">
                             <h3 class="exp-company">Care Pharmacies</h3>
                             <span class="exp-role">Shift Manager</span>
@@ -472,7 +483,8 @@
                 <!-- Job 5: El Ezaby Pharmacy -->
                 <div class="exp-card" data-exp="5">
                     <div class="exp-card-header">
-                        <div class="exp-dot"></div>
+                        <img class="exp-logo" src="https://www.google.com/s2/favicons?domain=elezabypharmacy.com&sz=64"
+                            alt="El Ezaby Pharmacy">
                         <div class="exp-info">
                             <h3 class="exp-company">El Ezaby Pharmacy Chain</h3>
                             <span class="exp-role">Pharmacist</span>
@@ -548,14 +560,15 @@
                 <div class="modal-icon icon-rate"><i class="fas fa-star"></i></div>
                 <h2>Rate Performance</h2>
             </div>
-            <p class="modal-desc" style="margin-bottom: 20px;">Please rate my performance across the following categories.</p>
-            
+            <p class="modal-desc" style="margin-bottom: 20px;">Please rate my performance across the following
+                categories.</p>
+
             <form id="ratingForm" class="rating-form testimonial-form">
                 <div class="form-row" style="margin-bottom: 8px;">
                     <input type="text" id="rateName" placeholder="Your Name" required>
                     <input type="text" id="ratePosition" placeholder="Your Position / Company" required>
                 </div>
-                
+
                 <div class="rating-category">
                     <label>Quality of Work</label>
                     <div class="slider-container">
@@ -598,15 +611,17 @@
                         <span class="rating-value" id="valOverall">6</span>
                     </div>
                 </div>
-                
-                <button type="submit" class="submit-btn" id="submitRatingBtn" style="margin-top: 24px; width: 100%; justify-content: center;">
+
+                <button type="submit" class="submit-btn" id="submitRatingBtn"
+                    style="margin-top: 24px; width: 100%; justify-content: center;">
                     <span>Submit Rating</span>
                     <i class="fas fa-paper-plane"></i>
                 </button>
             </form>
 
-            <h3 style="margin: 32px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent Ratings</h3>
-            
+            <h3 style="margin: 32px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent
+                Ratings</h3>
+
             <div class="testimonials-container" id="ratingsList" style="padding-right: 8px;">
                 <div class="loading-spinner"><i class="fas fa-circle-notch fa-spin"></i> Loading...</div>
             </div>
@@ -621,7 +636,7 @@
                 <div class="modal-icon icon-comment"><i class="fas fa-comment-dots"></i></div>
                 <h2>What Others Say About Me</h2>
             </div>
-            
+
             <div class="add-testimonial">
                 <h3>Leave a Comment</h3>
                 <form id="testimonialForm" class="testimonial-form">
@@ -629,7 +644,8 @@
                         <input type="text" id="testName" placeholder="Your Name" required>
                         <input type="text" id="testPosition" placeholder="Your Position / Company" required>
                     </div>
-                    <textarea id="testComment" placeholder="What was your experience working with me?" rows="3" required></textarea>
+                    <textarea id="testComment" placeholder="What was your experience working with me?" rows="3"
+                        required></textarea>
                     <button type="submit" class="submit-btn" id="submitTestimonial">
                         <span>Send Comment</span>
                         <i class="fas fa-paper-plane"></i>
@@ -637,8 +653,9 @@
                 </form>
             </div>
 
-            <h3 style="margin: 24px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent Comments</h3>
-            
+            <h3 style="margin: 24px 0 16px 0; font-size: 15px; color: var(--text-primary); text-align: center;">Recent
+                Comments</h3>
+
             <div class="testimonials-container" id="testimonialsList" style="padding-right: 8px;">
                 <div class="loading-spinner"><i class="fas fa-circle-notch fa-spin"></i> Loading...</div>
             </div>

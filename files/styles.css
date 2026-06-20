@@ -1457,6 +1457,17 @@ footer p {
     transform: scale(1.2);
 }
 
+.exp-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
 .exp-card-header {
     display: flex;
     align-items: center;
